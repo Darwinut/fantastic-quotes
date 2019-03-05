@@ -6,8 +6,11 @@ function print(message) {
     outputDiv.innerHTML = message;
 }
 
-for (var i = 0; i < quotes.length; i += 1 ) {
-quote = quotes[i];
-message += '<h2>Quote: ' + quote.quotation + '</h2>';
+function randomQuote() {
+  var i = Math.floor(Math.random() * quotes.length);
+  quote = quotes[i];
+  message += '<h2>Quote: ' + quote.quotation + '</h2>';
+  return message;
 }
-print (message);
+
+print (randomQuote());
